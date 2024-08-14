@@ -21,7 +21,7 @@
       E.g. {\"clojars\" {:url \"https://clojars.org/repo\"}}"
   ([deps-map]
    (outdated-deps deps-map {}))
-  ([deps-map {:as options :keys [repositories file-path] :or {file-path ""}]
+  ([deps-map {:as options :keys [repositories file-path] :or {file-path ""}}]
    (let [deps-edn (cond-> {:deps deps-map}
                     repositories (assoc :mvn/repos repositories))
          antq-deps (dep.clojure/extract-deps file-path (pr-str deps-edn))
