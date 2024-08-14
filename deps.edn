@@ -1,4 +1,4 @@
-{:paths ["src"]
+{:paths ["src/antq"]
  :deps
  {org.clojure/clojure {:mvn/version "1.11.3"}
   org.clojure/data.xml {:mvn/version "0.2.0-alpha9"}
